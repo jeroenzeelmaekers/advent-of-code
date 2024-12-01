@@ -9,13 +9,17 @@ async function main() {
   ).text()
 
   {
+    console.time('Part 1')
     let result = part1(data)
     console.log('Result:', result)
+    console.timeEnd('Part 1')
   }
 
   {
+    console.time('Part 2')
     let result = part2(data)
     console.log('Result:', result)
+    console.timeEnd('Part 2')
   }
 }
 
