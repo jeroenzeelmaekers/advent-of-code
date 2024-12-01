@@ -1,11 +1,22 @@
 {
   "name": "advent-of-code",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
+  "author": "Jeroen Zeelmaekers",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "tdd": "vitest",
+    "format": "biome check --staged --unsafe",
+    "lint": "biome check"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest",
+    "vitest": "2.1.6"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   }
 }
-

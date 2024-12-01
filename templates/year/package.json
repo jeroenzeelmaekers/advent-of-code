@@ -1,0 +1,11 @@
+{
+  "name": "aoc-{{YEAR}}",
+  "private": true,
+  "author": "Jeroen Zeelmaekers",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "tdd": "vitest"
+  }
+}
