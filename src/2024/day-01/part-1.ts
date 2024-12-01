@@ -4,7 +4,7 @@ export default function (blob: string) {
     .split('\n')
     .map((line) => line.trim().split('  '))
 
-  const b = input.map(([_, b]) => b).sort((a, b) => +a - +b)
+  const b = input.map(([_, b]) => +b).sort((a, b) => a - b)
   return input
     .map(([a, _]) => +a)
     .sort((a, b) => a - b)
