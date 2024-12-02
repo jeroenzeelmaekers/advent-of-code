@@ -9,16 +9,12 @@ export default function (blob: string) {
 function parse(input: string) {
   const lineValues = input.split(' ')
 
-  let isIncreasing: boolean | null = null
   let isUnsafe = true
 
+  const isIncreasing = +lineValues[0] < +lineValues[1]
   for (let i = 0; i < lineValues.length; i++) {
     let element = +lineValues[i]
     let nextElement = +lineValues[i + 1]
-
-    if (isIncreasing === null) {
-      isIncreasing = element < nextElement
-    }
 
     if (!isIncreasing) {
       ;[element, nextElement] = [nextElement, element]

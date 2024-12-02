@@ -8,7 +8,7 @@
   "scripts": {
     "test": "vitest run",
     "tdd": "vitest",
-    "format": "biome check --staged --unsafe",
+    "format": "biome check --write .",
     "lint": "biome check"
   },
   "devDependencies": {
