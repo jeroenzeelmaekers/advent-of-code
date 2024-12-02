@@ -13,27 +13,18 @@ function parse(input: string) {
   let isUnsafe = true
 
   for (let i = 0; i < lineValues.length; i++) {
-    const element = +lineValues[i]
-    const nextElement = +lineValues[i + 1]
+    let element = +lineValues[i]
+    let nextElement = +lineValues[i + 1]
 
     if (isIncreasing === null) {
-      if (element < nextElement) {
-        isIncreasing = true
-      } else if (element > nextElement) {
-        isIncreasing = false
-      } else {
-        isUnsafe = false
-        break
-      }
-    }
-
-    if (isIncreasing) {
-      isUnsafe = applyRules(element, nextElement)
+      isIncreasing = element < nextElement
     }
 
     if (!isIncreasing) {
-      isUnsafe = applyRules(nextElement, element)
+      ;[element, nextElement] = [nextElement, element]
     }
+
+    isUnsafe = applyRules(element, nextElement)
 
     if (!isUnsafe) {
       break
