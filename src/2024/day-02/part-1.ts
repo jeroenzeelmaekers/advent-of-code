@@ -7,14 +7,23 @@ export default function (blob: string) {
 }
 
 function parse(input: string) {
-  const lineValues = input.split(' ')
+  const report = input.split(' ')
 
+<<<<<<< Updated upstream
   let isIncreasing: boolean | null = null
   let isUnsafe = true
 
   for (let i = 0; i < lineValues.length; i++) {
     const element = +lineValues[i]
     const nextElement = +lineValues[i + 1]
+=======
+  let isSafe = true
+
+  const isIncreasing = +report[0] < +report[1]
+  for (let i = 0; i < report.length; i++) {
+    let element = +report[i]
+    let nextElement = +report[i + 1]
+>>>>>>> Stashed changes
 
     if (isIncreasing === null) {
       if (element < nextElement) {
@@ -27,6 +36,7 @@ function parse(input: string) {
       }
     }
 
+<<<<<<< Updated upstream
     if (isIncreasing) {
       isUnsafe = applyRules(element, nextElement)
     }
@@ -34,12 +44,15 @@ function parse(input: string) {
     if (!isIncreasing) {
       isUnsafe = applyRules(nextElement, element)
     }
+=======
+    isSafe = applyRules(element, nextElement)
+>>>>>>> Stashed changes
 
-    if (!isUnsafe) {
+    if (!isSafe) {
       break
     }
   }
-  return isUnsafe
+  return isSafe
 }
 
 function applyRules(a: number, b: number) {
