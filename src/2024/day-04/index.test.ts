@@ -36,19 +36,28 @@ MXMXAXMASX
   })
 })
 
-describe.skip('Part 2', () => {
+describe('Part 2', () => {
   it.each([
     [
       `
-
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
       `,
-      'TODO',
+      9,
     ],
   ])('should produce the correct value for example %#', (input, expected) => {
     expect(part2(input)).toBe(expected)
   })
 
-  it.skip('should produce the correct value for the input data', async () => {
-    expect(part2(await data)).toMatchInlineSnapshot()
+  it('should produce the correct value for the input data', async () => {
+    expect(part2(await data)).toMatchInlineSnapshot(`1886`)
   })
 })
