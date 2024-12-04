@@ -27,28 +27,20 @@ function checkVerticalSlice(input: string[], i: number, j: number) {
   return input[i][j] + input[i + 1][j] + input[i + 2][j] + input[i + 3][j]
 }
 function checkDiagonalLeftSlice(input: string[], i: number, j: number) {
-  try {
-    return (
-      input[i + 3][j - 3] +
-      input[i + 2][j - 2] +
-      input[i + 1][j - 1] +
-      input[i][j]
-    )
-  } catch {
-    return ''
-  }
+  return (
+    input[i + 3][j - 3] +
+    input[i + 2][j - 2] +
+    input[i + 1][j - 1] +
+    input[i][j]
+  )
 }
 function checkDiagonalRightSlice(input: string[], i: number, j: number) {
-  try {
-    return (
-      input[i + 3][j + 3] +
-      input[i + 2][j + 2] +
-      input[i + 1][j + 1] +
-      input[i][j]
-    )
-  } catch {
-    return ''
-  }
+  return (
+    input[i + 3][j + 3] +
+    input[i + 2][j + 2] +
+    input[i + 1][j + 1] +
+    input[i][j]
+  )
 }
 
 function checkWord(input: string) {
